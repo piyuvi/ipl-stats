@@ -1,22 +1,31 @@
-# ipl-stats
+This VueJs webapp is to display IPL data across the seasons using the dataset provided. The ball by ball analysis is also shown for every match across all overs under the 'Show Details' option of every match.
 
-> A Vue.js project
+The external libraries used are-
 
-## Build Setup
+1. BootStrap Vue - The reason for using specifically Bootstrap Vue is that it provides a large number of components like                           navtabs, table, pagination etc.
 
-``` bash
-# install dependencies
-npm install
+2. vue-highcharts - To render and display the chart for ball by ball analysis.
 
-# serve with hot reload at localhost:8080
-npm run dev
+3. vue-spinner - To add the loader while the page renders completely.
 
-# build for production with minification
-npm run build
+4. Papa parse - To parse the csv files.
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+5. moment - To display the dates in desired format.
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+The bonus points been taken care of are-
+
+1. Built in VueJS.
+
+2. Optimized the loading time by loading the csv files only once during page init.
+
+3. Mobile Responsive , most of it was taken care by using bootstrap framework.
+
+4. Progressive webapp and offline available by leveraging service workers.
+
+This page scores a PWA score of 65 on Lighthouse.
+
+The demo page is hosted at - https://ipl-stats.herokuapp.com/
+
+The code can be found here - https://github.com/piyuvi/ipl-stats
+
 
