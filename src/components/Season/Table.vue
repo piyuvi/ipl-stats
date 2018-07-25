@@ -67,7 +67,7 @@
     </b-row>
     <b-modal id="chart" size="lg" centered>
       <pulse-loader :loading="propData.matchDetails==undefined" :color="color" ></pulse-loader>
-      <Chart v-if="propData.matchDetails" :match="propData" :key="propData.matchDetails[0].Match_Id"></Chart>
+      <Chart v-if="propData.matchDetails" :match="propData" :key="propData.matchDetails"></Chart>
     </b-modal>
   </div>
 </template>
