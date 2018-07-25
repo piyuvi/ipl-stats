@@ -67,7 +67,7 @@
     </b-row>
     <b-modal id="chart" size="lg" centered>
       <pulse-loader :loading="propData.matchDetails==undefined" :color="color" ></pulse-loader>
-      <Chart v-if="propData.matchDetails" :match="propData"></Chart>
+      <Chart v-if="propData.matchDetails" :match="propData" :key="propData.matchDetails[0].Match_Id"></Chart>
     </b-modal>
   </div>
 </template>
@@ -171,6 +171,7 @@ export default {
       this.fields=['Match_Date','Team_Name','Opponent_Team_Name','Result','show_details']
     },
     selectedMatch(row){
+      this.ballDetails=[]
       this.byMatch.filter((ball)=>{
         if(row.Match_Id==ball.Match_Id){
           if(ball.Team_Batting_Id==row.Team_Name_Id)
@@ -180,7 +181,7 @@ export default {
           this.ballDetails.push(ball)
          } 
       })
-      this.propData=Object.assign({},{matchDetails:this.ballDetails})
+      this.propData['matchDetails']=this.ballDetails
     }
   },
   created(){
